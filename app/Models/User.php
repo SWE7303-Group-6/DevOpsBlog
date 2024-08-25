@@ -6,10 +6,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Firefly\FilamentBlog\Traits\HasBlog;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, HasBlog;
 
     /**
      * The attributes that are mass assignable.
@@ -44,4 +45,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function canComment(): bool
+    {
+        // your conditional logic here
+        return true;
+    }
 }
+

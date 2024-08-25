@@ -38,6 +38,6 @@ Thank you for considering contributing to the Laravel framework! The contributio
 * run npm install 
 * run composer install
 * copy .env.example into .env file
-* create a database according to its name in .env file (in this demo its called laravel)
+* create a database according to its name in .env file (in this project its called blog)
 * run php artisan migrate --seed 
 
